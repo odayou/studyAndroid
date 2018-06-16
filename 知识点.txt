@@ -1,0 +1,42 @@
+# android学习
+
+## java配置
+- jdk java开发工具包
+- jre  java执行环境
+- java_home java路径
+- classpath java工具包路径
+- path jre安装路径
+- avd 安卓模拟器 android virtual device manager
+
+## 安卓工程结构
+- assets 资源目录 ，里面的资源不会自动编译进应用程序，只有用到你的资源才会
+- bin  编译后生成的文件
+- libs 第三方jar包
+- res 资源目录 区别于assets, 里面的所有资源会编译到apk包中
+  - drawable 不同分辨率的图片资源
+  - layout 布局文件
+  - values 常量 如工程字体大小 颜色 （values v11 指对应到drawable的规格） 
+- androidManisest.xml 引用的权限等，**apk执行的时候要先扫描此文件**
+## 控件
+- TextView 显示文本框
+  - 属性
+    - id
+	- layout_width 控件的宽度
+	  - wrap_content 包裹实际内容，实际内容有多宽 就显示多宽
+	  - match_parent 当前控件铺满父类容器剩余部分 **2.3 api之后添加的属性值 **
+	  - fill_parent 当前控件铺满父类容器剩余部分 和match-parent完全一样
+	- textSize 文本字体 **单位sp**
+    - ...
+- EditText 输入文本框
+  - 属性
+    - ...
+    - hint 提示文本，未输入内容时候的默认文本
+    - inputType 文本框类型 
+	- text 控件的文本内容， 即输入的值
+- ImageView
+  - src 图片路迳
+  - background 设置背景图片或者颜色
+- Button 按钮
+- ImageButton 图片按钮
+## activity 活动
+*把布局xml文件引入活动使用setContentView(R.layout.main_activity), main_activity是布局xml的文件名*
